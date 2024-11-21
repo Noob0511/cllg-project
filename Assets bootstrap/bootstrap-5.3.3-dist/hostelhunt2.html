@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Hunt</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       :root {
+            --primary-color: #007F73; /* Dark teal-green */
+            --secondary-color: #4CCD99; /* Bright mint-green */
+            --background-light: #CFFDE1; /* Soft pastel green */
+            --text-light: #FFFFFF; /* White for contrast */
+        }
+
+
+        body {
+            background-color: var(--background-light);
+            color: var(--secondary-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar .nav-link {
+            color: var(--text-light);
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-center h2 {
+            color: var(--primary-color);
+        }
+
+        .search-bar button {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+        }
+
+        .search-bar button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .card {
+            background-color: var(--text-light);
+            border: 1px solid var(--primary-color);
+        }
+
+        .card-title {
+            color: var(--primary-color);
+        }
+
+        .card-text {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./Assets bootstrap/bootstrap-5.3.3-dist/img/image.png" alt="logo">
+                Hostel Hunt
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">List My Hostel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Create an Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <!-- Image Background Section with Search Bar -->
+     <div id="imageCarousel" class="carousel slide search-bar-container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Assets bootstrap/bootstrap-5.3.3-dist/img/img1.jpg" alt="Hostel Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets bootstrap/bootstrap-5.3.3-dist/img/img2.jpg" alt="Hostel Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets bootstrap/bootstrap-5.3.3-dist/img/pexels-cottonbro-5137980.jpg" alt="Hostel Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets bootstrap/bootstrap-5.3.3-dist/img/pexels-ivan-samkov-5676744.jpg" alt="Hostel Image 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    <!-- Tagline Section -->
+    <div class="text-center bg-light py-3">
+        <h2>Find a place where you feel at home</h2>
+    </div>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar container my-4">
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="location" class="form-label">Location</label>
+                <select id="location" class="form-select">
+                    <option selected>Choose Location</option>
+                    <option value="1">Vijay Nagar</option>
+                    <option value="2">Palasia</option>
+                    <option value="3">Bhawarkuan</option>
+                    <option value="4">Geeta Bhavan</option>
+                    <option value="5">Bholaram</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" id="date" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <label for="budget" class="form-label">Budget (Starting from ₹3000)</label>
+                <input type="number" id="budget" class="form-control" placeholder="Enter Budget" min="3000">
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn px-5">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Amenities Section -->
+    <div class="container my-5">
+        <h3 class="text-center mb-4">Why Choose Us?</h3>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <img src="./Assets/bootstrap/img/low-security.png" alt="Low Security Deposit" class="img-fluid mb-3">
+                        <h5 class="card-title">Low Security Deposit</h5>
+                        <p class="card-text">Enjoy affordable stays without worrying about high deposits.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <img src="./Assets/bootstrap/img/privacy.png" alt="Privacy" class="img-fluid mb-3">
+                        <h5 class="card-title">Privacy</h5>
+                        <p class="card-text">Your personal space matters. Live without interruptions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <img src="./Assets/bootstrap/img/no-interruption.png" alt="No Interruption" class="img-fluid mb-3">
+                        <h5 class="card-title">No Interruption</h5>
+                        <p class="card-text">Experience peaceful living with like-minded individuals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <img src="./Assets/bootstrap/img/quick-shifting.png" alt="Quick Shifting" class="img-fluid mb-3">
+                        <h5 class="card-title">Quick Shifting</h5>
+                        <p class="card-text">Move in hassle-free with immediate shifting options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

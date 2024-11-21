@@ -1,0 +1,72 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: F2E8C6; /* Light background color */
+    color: #333; /* Dark text for readability */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: 8C3061;  
+    height: 80px; /* Increased navbar height */
+}
+
+.navbar-brand, .nav-link {
+    color: rgb(170, 41, 41) !important;
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+.navbar img {
+    height: 50px; /* Increased logo size */
+    margin-right: 15px; /* Space between logo and text */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Search Bar Section with Background Images */
+.search-bar-container {
+    position: relative;
+    height: 600px; /* Increased height for the image container */
+    background-size: cover;
+    background-position: center;
+}
+
+.search-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%; /* Wider search bar */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar form .form-control, 
+.search-bar form .form-select {
+    border-radius: 8px;
+}
+
+.search-bar .btn-primary {
+    background-color: #8f91e0; /* Match button color with theme */
+    border: none;
+}
+
+.carousel-item {
+    height: 600px; /* Match height of the container */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ensures the image fits without distortion */
+    width: 100%;
+    height: 100%;
+}
+
+/* Space between navbar and image section */
+.navbar + .search-bar-container {
+    margin-top: 10px;
+}
